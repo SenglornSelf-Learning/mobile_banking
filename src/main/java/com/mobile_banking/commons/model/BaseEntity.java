@@ -12,7 +12,7 @@ public class BaseEntity {
     @Column(name = "cret_id", updatable = false, length = 50)
     private String createdBy;
 
-    @Schema(description = "Which is ip created")
+    @Schema(description = "Which IP created")
     @Column(name = "cret_ip", updatable = false, length = 50)
     private String createdIp;
 
@@ -24,6 +24,7 @@ public class BaseEntity {
     @Column(name = "modi_id", insertable = false, length = 100)
     private String modifiedBy;
 
+    @Schema(description = "Which IP last updated")
     @Column(name = "modi_ip", insertable = false, length = 50)
     private String modifiedIp;
 
