@@ -19,7 +19,7 @@ public class PageResponse<T> {
 	private long totalCount;
 	private int pageIndex;
 	private int pageSize;
-	private int totalPages;
+	private int totalPages; 
 
 	public PageResponse(List<T> items, long totalCount, int pageIndex, int pageSize, int totalPages) {
 		this.status = true;

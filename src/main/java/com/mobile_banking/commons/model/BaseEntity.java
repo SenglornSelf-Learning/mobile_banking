@@ -4,9 +4,17 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.Column;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.PreUpdate;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.time.LocalDateTime;
 
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class BaseEntity {
     @Schema(description = "User who created.")
     @Column(name = "cret_id", updatable = false, length = 50)
@@ -21,7 +29,7 @@ public class BaseEntity {
     private LocalDateTime createdAt;
 
     @Schema(description = "User who last updated.")
-    @Column(name = "modi_id", insertable = false, length = 100)
+    @Column(name = "modi_id", insertable = false, length = 50)
     private String modifiedBy;
 
     @Schema(description = "Which IP last updated")
